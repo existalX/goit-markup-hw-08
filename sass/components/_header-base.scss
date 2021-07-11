@@ -1,0 +1,7 @@
+.header {
+  @include borderBottom($headerBorderColor);
+}
+
+.header-container {
+  @include flexSpaceCenter;
+}

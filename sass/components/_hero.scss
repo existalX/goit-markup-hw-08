@@ -1,0 +1,42 @@
+.hero {
+  // width: 1600px;
+  @include pushAuto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+
+  background-color: $heroBkgColor;
+  background-image: linear-gradient($heroOverlay, $heroOverlay), url('../images/team.jpg');
+  background-size: contain;
+}
+
+.hero__title {
+  width: 698px;
+  @include pushAuto;
+  margin-bottom: 30px;
+
+  font-weight: $fontsHight;
+  font-size: $size-44;
+  line-height: 1.364;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $lightColor;
+}
+.hero__button {
+  min-width: 200px;
+  padding: 10px 0;
+  border-radius: $borderRadiusAccent;
+  border-color: transparent;
+
+  font-family: $fontRoboto;
+  font-weight: $fontsNormal;
+  font-size: $size-16;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: $lightColor;
+  background-color: $activeColor;
+
+  &:hover {
+    background-color: $buttonHoverHero;
+  }
+}

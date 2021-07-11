@@ -1,0 +1,47 @@
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+body {
+  @include accentFonts;
+  color: $primaryColor;
+}
+.container {
+  width: 1200px;
+  @include pushAuto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section.not-top-padding {
+  padding-top: 0;
+}
+.accent-title {
+  text-align: center;
+  margin-bottom: 50px;
+
+  font-weight: $fontsNormal;
+  font-size: $size-36;
+  line-height: 1.167;
+  color: $titleColor;
+}

@@ -1,0 +1,16 @@
+.footer-right-part {
+  margin-left: 70px;
+}
+.footer-right-part_text {
+  margin-bottom: 20px;
+  font-weight: $fontsNormal;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $lightColor;
+}
+
+.card-social__link--footer {
+  background-color: $footerSocialBkgColor;
+  color: $lightColor;
+}

@@ -1,0 +1,25 @@
+.footer {
+  padding: 60px 0;
+  background-color: $footerBkgColor;
+}
+
+.footer-list {
+  @include flexBaseline;
+}
+
+.footer-logo {
+  padding: 0;
+  margin-bottom: 20px;
+  display: block;
+  &:hover,
+  &:focus {
+    color: $activeColor;
+  }
+}
+.footer__logo--secondary {
+  color: $lightColor;
+  &:hover,
+  &:focus {
+    color: $activeColor;
+  }
+}

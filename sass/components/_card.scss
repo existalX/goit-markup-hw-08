@@ -1,0 +1,56 @@
+.card-list {
+  @include flexWrap;
+  margin-right: -30px;
+  margin-top: -30px;
+}
+.card-list__item {
+  flex-basis: calc((100% - 90px) / 3);
+  margin-top: 30px;
+  margin-right: 30px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:hover .card-list__overlay {
+    box-shadow: $cardBoxShadow;
+    transform: translateY(0);
+  }
+}
+
+.card-list__thumb {
+  position: relative;
+  overflow: hidden;
+}
+.card-list__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 63px 24px;
+
+  font-size: $size-18;
+  line-height: 1.556;
+  color: $lightColor;
+  background-color: $activeColor;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+}
+.card-list__content {
+  padding: 20px 24px;
+  text-align: start;
+  background-color: $lightColor;
+  @include borderCardPortfolio($cardPortfolioBorderColor);
+}
+.card-list__title {
+  margin-bottom: 4px;
+
+  font-weight: $fontsNormal;
+  font-size: $size-18;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $titleColor;
+}
+.card-list__text {
+  font-size: $size-16;
+  line-height: 1.875;
+  color: $primaryColor;
+}
