@@ -1,9 +1,28 @@
 .portfolio-filters {
-  @include flexJust-Center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 
-  &__item:not(:last-child) {
+  @include flexWrap;
+  justify-content: flex-start;
+  &__item {
     margin-right: 8px;
+  }
+  &__item:not(:nth-child(n + 4)) {
+    margin-bottom: 15px;
+  }
+  @include forSize(minimobile) {
+    &__item:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  @include forSize(tablets) {
+    margin-bottom: 30px;
+    @include flexJust-Center;
+    &__item:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+  @include forSize(desktop) {
+    margin-bottom: 50px;
   }
 }
 
@@ -13,6 +32,7 @@
 
 .portfolio-filters__button {
   min-width: 73px;
+  height: 38px;
   padding: 6px 22px;
   border-radius: 4px;
 

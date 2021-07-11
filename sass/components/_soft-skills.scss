@@ -1,17 +1,33 @@
 .visually-hidden {
   @extend %visually-hidden;
 }
-.soft-skills__list {
-  display: flex;
-  margin-left: -30px;
+
+@include forSize(tablets) {
+  .soft-skills__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    .soft-skills__title {
+      text-align: left;
+    }
+  }
 }
-.soft-skills__item {
-  flex-basis: calc((100% - 90px) / 4);
-  margin-left: 30px;
+@include forSize(desktop) {
+  .soft-skills__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+}
+.soft-skills__item:not(:last-child) {
+  margin-bottom: 30px;
+  @include forSize(tablets) {
+    margin-bottom: 0;
+  }
 }
 .soft-slills__thumb {
   @include flexCenterCenter;
-  width: 270px;
+  width: 100%;
   height: 120px;
   margin-bottom: 30px;
   background-color: $lightgreyBkgColor;
@@ -21,6 +37,7 @@
   height: 70px;
 }
 .soft-skills__title {
+  text-align: center;
   margin-bottom: 10px;
   font-weight: $fontsNormal;
   font-size: $size-14;

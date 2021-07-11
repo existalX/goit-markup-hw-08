@@ -16,9 +16,20 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
   background-color: $lightColor;
+  @include forSize(minimobile) {
+    max-width: 318px;
+    max-height: 100%;
+  }
+  @include forSize(mobile) {
+    max-width: 450px;
+    max-height: 609px;
+  }
+
+  @include forSize(desktop) {
+    max-width: 528px;
+    max-height: 581px;
+  }
 }
 .backdrop__button {
   position: absolute;
@@ -46,8 +57,15 @@
   padding: 40px;
 }
 .backdrop-form__title {
+  @include forSize(minimobile) {
+    max-width: 240px;
+    @include pushAuto;
+    font-weight: $fontsNormal;
+    font-size: $size-16;
+    line-height: 1.43;
+    letter-spacing: 0.03em;
+  }
   margin-bottom: 12px;
-
   font-weight: $fontsNormal;
   font-size: $size-20;
   line-height: 1.15;
@@ -58,7 +76,15 @@
 .backdrop-form__label {
   position: relative;
   @include flexColumn;
-  width: 448px;
+  @include forSize(minimobile) {
+    max-width: 240px;
+  }
+  @include forSize(mobile) {
+    min-width: 370px;
+  }
+  @include forSize(desktop) {
+    min-width: 448px;
+  }
   margin-bottom: 10px;
   color: $titleColor;
 
@@ -94,7 +120,15 @@
 }
 .backdrop-form__textarea {
   resize: none;
-  width: 448px;
+  @include forSize(minimobile) {
+    max-width: 240px;
+  }
+  @include forSize(mobile) {
+    min-width: 370px;
+  }
+  @include forSize(desktop) {
+    min-width: 448px;
+  }
   height: 120px;
   padding: 12px 16px;
   @include borderSolid(1, $inputBorderColor);
@@ -108,6 +142,7 @@
   @include flexCenterCenter;
   margin-bottom: 30px;
 }
+
 .checkbox-label__input {
   @extend %visually-hidden;
 
@@ -118,6 +153,13 @@
     background-position: center;
     background-origin: border-box;
     border-color: $activeColor;
+  }
+}
+.checkbox-label__text {
+  @include fontStyle(500, 12, 14, 3);
+
+  @include forSize(desktop) {
+    @include fontStyle(500, 14, 24, 3);
   }
 }
 .checkbox-label__icon {

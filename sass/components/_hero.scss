@@ -1,26 +1,54 @@
 .hero {
-  // width: 1600px;
   @include pushAuto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-bottom: 118px;
+  padding-top: 118px;
   text-align: center;
+  background-image: linear-gradient($heroOverlay, $heroOverlay), url('../images/mobile-header.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient($heroOverlay, $heroOverlay),
+      url('../images/mobile-header@2x.jpg');
+  }
 
-  background-color: $heroBkgColor;
-  background-image: linear-gradient($heroOverlay, $heroOverlay), url('../images/team.jpg');
-  background-size: contain;
+  @include forSize(tablets) {
+    background-image: linear-gradient($heroOverlay, $heroOverlay),
+      url('../images/tablet-header.jpg');
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient($heroOverlay, $heroOverlay),
+        url('../images/tablet-header@2x.jpg');
+    }
+  }
+
+  @include forSize(desktop) {
+    max-width: 1600px;
+    padding-bottom: 200px;
+    padding-top: 200px;
+    background-image: linear-gradient($heroOverlay, $heroOverlay),
+      url('../images/desktop-header.jpg');
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient($heroOverlay, $heroOverlay),
+        url('../images/desktop-header@2x.jpg');
+    }
+  }
 }
 
 .hero__title {
-  width: 698px;
   @include pushAuto;
   margin-bottom: 30px;
-
+  max-width: 360px;
   font-weight: $fontsHight;
-  font-size: $size-44;
-  line-height: 1.364;
+  font-size: $size-26;
+  line-height: 1.616;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $lightColor;
+
+  @include forSize(desktop) {
+    max-width: 698px;
+    font-size: $size-44;
+    line-height: 1.364;
+  }
 }
 .hero__button {
   min-width: 200px;
@@ -36,7 +64,8 @@
   color: $lightColor;
   background-color: $activeColor;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $buttonHoverHero;
   }
 }

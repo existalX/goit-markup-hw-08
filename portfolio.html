@@ -20,6 +20,11 @@
           <a href="./" class="logo site-nav__logo"
             >Web<span class="site-nav__logo-secondary">Studio</span></a
           >
+          <button class="mobile-button mobile-button__open js-open-menu" type="button">
+            <svg width="40" height="40" class="mobile-button__icon">
+              <use class="icon-open" href="./images/mobile-icon.svg#menu"></use>
+            </svg>
+          </button>
           <ul class="site-nav__list">
             <li class="site-nav__item">
               <a href="./index.html" class="site-nav__link">Студия</a>
@@ -51,6 +56,66 @@
             >
           </li>
         </ul>
+      </div>
+      <!-- mobile menu -->
+
+      <div class="mobile-menu js-menu-container" id="menu-container">
+        <button
+          class="mobile-button mobile-button__closed js-close-menu"
+          mobile-button__open
+          aria-controls="menu-container"
+          type="button"
+        >
+          <svg width="40" height="40" class="mobile-button__icon">
+            <use class="icon-closed" href="./images/mobile-icon.svg#closed-menu"></use>
+          </svg>
+        </button>
+        <div class="container">
+          <nav class="mobile__site-nav">
+            <ul class="mobile__list">
+              <li class="mobile__item">
+                <a href="./index.html" class="mobile__link">Студия</a>
+              </li>
+              <li class="mobile__item">
+                <a href="./portfolio.html" class="mobile__link">Портфолио</a>
+              </li>
+              <li class="mobile__item">
+                <a href="" class="mobile__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="mobile-contacts">
+            <li class="mobile-contacts__item">
+              <a href="tel:+380961111111" class="mobile-contacts__link mobile-contacts__link--tel">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-contacts__item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mobile-contacts__link mobile-contacts__link--mail"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="mobile-social">
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Instagram</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Twitter</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Facebook</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <!-- main section -->
@@ -85,7 +150,22 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__thumb">
-                  <img src="./images/tekhnokriak.jpg" alt="foto laptop" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/clients-1.jpg 1x, ./images/clients-1@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="./images/tablet-clients1.jpg 1x, ./images/tablet-clients1@2x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="./images/mobile-clients1.jpg 1x, ./images/mobile-clients1@2x.jpg 2x"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/clients-1.jpg" alt="laptop" width="100%" />
+                  </picture>
                   <p class="card-list__overlay">
                     Технокряк это современная площадка распространения коронавируса. Компании
                     используют эту платформу для цифрового шпионажа и атак на защищённые сервера
@@ -102,7 +182,22 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__thumb">
-                  <img src="./images/poster.jpg" alt="two players basketball" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/clients-2.jpg 1x, ./images/clients-2@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="./images/tablet-clients2.jpg 1x, ./images/tablet-clients2@2x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="./images/mobile-clients2.jpg 1x, ./images/mobile-clients2@2x.jpg 2x"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/clients-2.jpg" alt="basketball players" width="100%" />
+                  </picture>
                   <p class="card-list__overlay">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque inventore, odit
                     vel modi eius fugit nam sit corrupti, quibusdam officiis saepe architecto
@@ -119,11 +214,22 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__thumb">
-                  <img
-                    src="./images/seafoodrestaurant.jpg"
-                    alt="logo restaurant-seafood"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/clients-3.jpg 1x, ./images/clients-3@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="./images/tablet-clients3.jpg 1x, ./images/tablet-clients3@2x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="./images/mobile-clients3.jpg 1x, ./images/mobile-clients3@2x.jpg 2x"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/clients-3.jpg" alt="logo-seafood restaurant" width="100%" />
+                  </picture>
                   <p class="card-list__overlay">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iusto dolores
                     fugiat esse commodi facere numquam nihil quibusdam architecto ex maiores optio
@@ -140,7 +246,22 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__thumb">
-                  <img src="./images/primeproject.jpg" alt="foto headphones" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/clients-4.jpg 1x, ./images/clients-4@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="./images/tablet-clients4.jpg 1x, ./images/tablet-clients4@2x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="./images/mobile-clients4.jpg 1x, ./images/mobile-clients4@2x.jpg 2x"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/clients-4.jpg" alt="foto headphones" width="100%" />
+                  </picture>
                   <p class="card-list__overlay">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ipsum quasi eos
                     optio dolor similique deleniti fugit a corrupti possimus quos exercitationem,
@@ -157,7 +278,23 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__thumb">
-                  <img src="./images/boxesproject.jpg" alt="foto two boxes" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/clients-5.jpg 1x, ./images/clients-5@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="./images/tablet-clients5.jpg 1x, ./images/tablet-clients5@2x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="./images/mobile-clients5.jpg 1x, .
+                      /images/mobile-clients5@2x.jpg 2x"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/clients-5.jpg" alt="foto two boxes" width="100%" />
+                  </picture>
                   <p class="card-list__overlay">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo vero culpa
                     recusandae mollitia provident sunt unde veritatis quia dolorum qui, officia id
@@ -174,7 +311,23 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__thumb">
-                  <img src="./images/inspiration.jpg" alt="foto mono block pc" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/clients-6.jpg 1x, ./images/clients-6@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="./images/tablet-clients6.jpg 1x, ./images/tablet-clients6@2x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="./images/mobile-clients6.jpg 1x, .
+                      /images/mobile-clients6@2x.jpg 2x"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/clients-6.jpg" alt="foto mono block pc" width="100%" />
+                  </picture>
                   <p class="card-list__overlay">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum sint, dicta
                     nisi harum distinctio corrupti corporis voluptas fugit culpa esse alias tenetur
@@ -191,7 +344,23 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__thumb">
-                  <img src="./images/limitededition.jpg" alt="foto edition" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/clients-7.jpg 1x, ./images/clients-7@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="./images/tablet-clients7.jpg 1x, ./images/tablet-clients7@2x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="./images/mobile-clients7.jpg 1x, .
+                      /images/mobile-clients7@2x.jpg 2x"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/clients-7.jpg" alt="foto edition" width="100%" />
+                  </picture>
                   <p class="card-list__overlay">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quas repellat
                     atque fugiat, perspiciatis quos incidunt quo quidem cumque, optio laboriosam,
@@ -208,7 +377,23 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__thumb">
-                  <img src="./images/labproject.jpg" alt="foto project-lab" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/clients-8.jpg 1x, ./images/clients-8@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="./images/tablet-clients8.jpg 1x, ./images/tablet-clients8@2x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="./images/mobile-clients8.jpg 1x, .
+                      /images/mobile-clients8@2x.jpg 2x"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/clients-8.jpg" alt="foto label tag" width="100%" />
+                  </picture>
                   <p class="card-list__overlay">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dolor aliquid
                     exercitationem iusto? Voluptates nisi debitis deleniti. At maiores molestias
@@ -225,7 +410,23 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__thumb">
-                  <img src="./images/growingbiz.jpg" alt="foto laptop" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/clients-9.jpg 1x, ./images/clients-9@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="./images/tablet-clients9.jpg 1x, ./images/tablet-clients9@2x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="./images/mobile-clients9.jpg 1x, .
+                      /images/mobile-clients9@2x.jpg 2x"
+                      media="(min-width:480px)"
+                    />
+
+                    <img src="./images/clients-9.jpg" alt="foto laptop" width="100%" />
+                  </picture>
                   <p class="card-list__overlay">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum reprehenderit
                     facilis laborum. Libero dolor pariatur amet. Illo nam ipsum deserunt. Omnis iure
@@ -319,5 +520,6 @@
         </div>
       </div>
     </footer>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
